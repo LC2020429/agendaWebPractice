@@ -1,0 +1,334 @@
+/* Reset y configuración general */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #121212;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+}
+
+/* ====== HEADER ====== */
+header {
+  background-color: #1e1e1e;
+  padding: 10px 20px;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+#marca {
+  height: 50px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #ffffff;
+  padding: 8px 12px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+  background-color: #fc5c65;
+  border-radius: 5px;
+}
+
+/* ====== CONTENIDO PRINCIPAL ====== */
+.contactos {
+  flex-grow: 1; /* Hace que el contenido crezca y empuje el footer hacia abajo */
+  margin: 3%;
+}
+
+/* Título de Contactos */
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 0 10px;
+}
+
+.title h1 {
+  color: #fc5c65;
+  margin: 0;
+}
+
+#btnAgregarContacto {
+  padding: 8px 16px;
+  background-color: #0cca12;
+  color: white;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#btnAgregarContacto:hover {
+  background-color: #87f38d;
+}
+
+/* ====== TABLA ====== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  text-align: center;
+  overflow-x: auto;
+}
+
+th,
+td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+
+td .star {
+  display: inline-block;
+  padding: 0 5px;
+}
+
+/* Estilos para la estrella de favoritos */
+.star {
+  cursor: pointer;
+  font-size: 20px;
+  color: #d3d3d3;
+  transition: color 0.3s ease;
+}
+
+.star.favorito {
+  color: #fc5c65;
+}
+
+/* ====== BOTONES ====== */
+button {
+  padding: 8px 16px;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 5px;
+}
+
+.editar {
+  background-color: #ffeb3b;
+  color: #000;
+  margin-right: 10px;
+}
+
+.editar:hover {
+  background-color: #fbc02d;
+}
+
+.eliminar {
+  background-color: #fc5c65;
+  color: #fff;
+}
+
+.eliminar:hover {
+  background-color: #e53935;
+}
+.infoComp {
+  background-color: royalblue;
+  margin-left: 1%;
+  color:#fff;
+}
+.infoComp:hover{ 
+  background-color: #2699E6;
+}
+/* ====== ESTILOS PARA LA BÚSQUEDA ====== */
+.buscar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Input de búsqueda */
+#searchInput {
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 200px;
+  background-color: #333;
+  color: white;
+}
+
+/* Botón de búsqueda en rojo */
+#btnBuscar {
+  padding: 8px 12px;
+  font-size: 14px;
+  background-color: #00c8ff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#btnBuscar:hover {
+  background-color: rgb(4, 67, 133);
+}
+
+/* ====== MODAL ====== */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background-color: #1e1e1e;
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+}
+
+.modal-content h2 {
+  margin-top: 0;
+  color: #fc5c65;
+}
+
+.modal input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #333;
+  color: #fff;
+}
+
+.modal button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#guardarContacto {
+  background-color: #0cca12;
+  color: white;
+}
+
+#guardarContacto:hover {
+  background-color: #87f38d;
+}
+
+.close {
+  color: #fff;
+  font-size: 24px;
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  cursor: pointer;
+}
+
+/* ====== FOOTER ====== */
+footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 10px;
+  width: 100%;
+  position: relative;
+  bottom: 0;
+}
+
+#user {
+  width: 50px;
+  height: auto;
+  margin-right: 2%;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+#user:hover {
+  transform: scale(1.1);
+}
+
+/* ====== RESPONSIVE DESIGN ====== */
+@media (max-width: 768px) {
+  .nav-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  table {
+    font-size: 14px;
+  }
+
+  td,
+  th {
+    padding: 8px;
+  }
+
+  th,
+  td {
+    word-wrap: break-word;
+  }
+
+  table {
+    overflow-x: auto;
+    display: block;
+  }
+
+  button {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+
+  .title {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #btnAgregarContacto {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+}
