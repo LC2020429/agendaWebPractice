@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tareas</title>
+    <link rel="stylesheet" href="../assets/tarea.css" />
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <img src="../images/2.png" id="marca" alt="marca" />
+            <nav>
+                <ul>
+                    <li><a href="./contactos.html">Contactos</a></li>
+                    <li><a href="./favs.html">Favoritos</a></li>
+                    <li><a href="./tarea.html">Tareas</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="todo-container">
+        <section>
+            <h2>Lista de Tareas</h2>
+            <input type="text" id="taskInput" placeholder="Agregar nueva tarea" />
+            <select id="prioritySelect">
+                <option value="alta">Alta</option>
+                <option value="media">Media</option>
+                <option value="baja">Baja</option>
+            </select>
+            <div class="align-button">
+                <button class="button-one" id="addTaskButton">Agregar</button>
+            </div>
+            <ul id="taskList"></ul>
+        </section>
+    </main>
+    <script src="../assets/tareas.js" defer></script>
+    <footer>
+        <a href="./cuenta.html">
+            <img src="../images/user.png" id="user" alt="user" />
+        </a>
+    </footer>
+</body>
+</html>

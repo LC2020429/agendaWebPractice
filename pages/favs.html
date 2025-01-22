@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Favoritos</title>
+    <link rel="stylesheet" href="../assets/favs.css" />
+  </head>
+  <body>
+    <header>
+      <div class="nav-container">
+        <img src="../images/2.png" id="marca" alt="marca" />
+        <nav>
+          <ul>
+            <li><a href="./contactos.html">Contactos</a></li>
+            <li><a href="./favs.html">Favoritos</a></li>
+            <li><a href="./tarea.html">Tareas</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <div class="contactos">
+      <div class="title">
+        <div class="buscar">
+          <h1>Favoritos</h1>
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Buscar contacto..."
+          />
+          <button id="btnBuscar">Buscar</button>
+        </div>
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Favorito</th>
+            <th>Nombre</th>
+            <th>Número</th>
+            <th>Dirección</th>
+            <th>Correo</th>
+          </tr>
+        </thead>
+        <tbody id="contactos-list">
+          <!-- Aquí se agregarán dinámicamente los contactos -->
+        </tbody>
+      </table>
+    </div>
+
+    <footer>
+      <a href="./cuenta.html">
+        <img src="../images/user.png" id="user" alt="user" />
+      </a>
+    </footer>
+
+    <script src="../assets/dataFavs.js"></script>
+  </body>
+</html>

@@ -1,0 +1,209 @@
+/* Asegura que el body tenga al menos la altura completa de la ventana */
+body {
+  background-color: #121212;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Esto hace que el body tenga una altura mínima de 100% de la pantalla */
+}
+
+/* Estilo del header */
+header {
+  background-color: #1e1e1e;
+  padding: 10px 20px;
+}
+
+/* Estilo del contenedor de navegación */
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* Estilo para la imagen de la marca */
+#marca {
+  height: 50px;
+}
+
+/* Estilo de la lista de navegación */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #ffffff;
+  padding: 8px 12px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+  background-color: #FC5C65;
+  border-radius: 5px;
+}
+
+/* Estilo del título */
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 0 10px; /* Asegura un poco de espacio dentro del contenedor */
+}
+
+.title h1 {
+  color: #FC5C65;
+  margin: 0;
+}
+
+/* Estilo para la estrella */
+.star {
+  cursor: pointer;
+  font-size: 20px;
+  color: #ffd903;
+}
+
+/* Estilo de la tabla */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  text-align: center;
+  overflow-x: auto;  /* Permite desplazarse horizontalmente si es necesario */
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+
+td .star {
+  display: inline-block;
+  padding: 0 5px; /* Espacio alrededor de la estrella */
+}
+
+/* Estilo de los botones de acciones */
+button {
+  padding: 8px 16px;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 5px;
+}
+
+/* Estilo de los contactos */
+.contactos {
+  margin-left: 3%;
+  margin-right: 3%;
+  flex-grow: 1; /* Permite que el contenedor crezca y empuje el footer hacia abajo */
+}
+
+/* ====== FOOTER ====== */
+footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 1%;
+  padding: 10px;
+  width: 100%;
+}
+
+#user {
+  width: 50px;
+  height: auto;
+  margin-right: 2%;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+#user:hover {
+  transform: scale(1.1);
+}
+#searchInput {
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 200px;
+  background-color: #333;
+  color: white;
+}
+
+/* Botón de búsqueda en rojo */
+#btnBuscar {
+  padding: 8px 12px;
+  font-size: 14px;
+  background-color: #00c8ff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#btnBuscar:hover {
+  background-color: rgb(4, 67, 133);
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+  .nav-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  table {
+    font-size: 14px;
+  }
+
+  td, th {
+    padding: 8px;
+  }
+
+  th, td {
+    word-wrap: break-word;
+  }
+
+  table {
+    overflow-x: auto;
+    display: block;
+  }
+
+  button {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+
+  .title {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #btnAgregarContacto {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+}
