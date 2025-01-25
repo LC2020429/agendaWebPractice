@@ -185,30 +185,6 @@ button.button-one:hover {
   transition: background-color 0.3s ease;
 }
 
-.priority-high {
-  background-color: #e63946;
-}
-
-.priority-high:hover {
-  background-color: #ff4d5a;
-}
-
-.priority-medium {
-  background-color: #f4a261;
-}
-
-.priority-medium:hover {
-  background-color: #fcbf83;
-}
-
-.priority-low {
-  background-color: #457b9d;
-}
-
-.priority-low:hover {
-  background-color: #5a9bd3;
-}
-
 /* ====== MENÚ DE EDICIÓN ====== */
 .edit-menu {
   background-color: #1e1e1e;
@@ -264,4 +240,57 @@ footer {
 
 #user:hover {
   transform: scale(1.1);
+}
+
+/* ====== ESTILOS PARA LAS TAREAS SEGÚN SU PRIORIDAD ====== */
+.task-item.alta {
+  background-color: #e63946 !important; /* Rojo para alta prioridad */
+  color: white;
+}
+
+.task-item.media {
+  background-color: #ff7f16 !important; /* Naranja para media prioridad */
+  color: black;
+}
+
+.task-item.baja {
+  background-color: #ffdd57 !important; /* Amarillo para baja prioridad */
+  color: black;
+}
+
+/* Ajustes generales para las tareas */
+#taskList li {
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+/* ====== MENÚ DESPLEGABLE PERSONALIZADO ====== */
+#prioritySelect {
+  width: 20%;
+  padding: 10px;
+  border: 1px solid #007bff; /* Azul */
+  border-radius: 5px;
+  background-color: #000; /* Fondo negro */
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Cambiar color del menú desplegable cuando se abre */
+#prioritySelect:focus {
+  background-color: #000; /* Negro */
+  color: white;
+  border-color: #66b3ff; /* Azul claro */
+}
+
+/* Estilo de las opciones cuando se despliega */
+#prioritySelect option {
+  background-color: #000; /* Negro */
+  color: #66b3ff; /* Azul claro */
 }
